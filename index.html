@@ -9,10 +9,12 @@
   </head>
   <body class="bg-blue-200">
     <div class="container mx-auto bg-emerald-400 w-3/4 min-h-screen">
-      <div class="h-44 bg-slate-100 flex flex-column">
-        <hr />
+      <div class="h-44 bg-slate-100 flex flex-column relative">
+        <span id="outPut" class="absolute bottom-0 right-0 m-4 text-3xl"
+          >00</span
+        >
       </div>
-      <div class="grid grid-cols-4 gap-4 m-6">
+      <div id="calculator-btn" class="grid grid-cols-4 gap-4 m-6">
         <div
           class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
         >
@@ -90,5 +92,7 @@
         </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
