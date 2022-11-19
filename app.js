@@ -17,10 +17,11 @@ function clearAll() {
 }
 function calculationFn() {
   let calScreen = dqs("#outPut").value;
-  let calculation = eval(calScreen);
-  dqs("#outPut-top").innerText = calScreen;
-  console.log(calScreen, " => Line No: 27");
-  dqs("#outPut").value = calculation;
+  if (calScreen !== "") {
+    let calculation = eval(calScreen);
+    dqs("#outPut-top").innerText = calScreen;
+    dqs("#outPut").value = calculation;
+  }
 }
 dqs("#calculator-btn").addEventListener("click", function (e) {
   let currentValue = e.target.innerText;
