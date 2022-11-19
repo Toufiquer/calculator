@@ -25,16 +25,23 @@ function calculationFn() {
 }
 dqs("#calculator-btn").addEventListener("click", function (e) {
   let currentValue = e.target.innerText;
-
   if (currentValue === "C") {
     clearAll();
   } else if (currentValue === "=") {
     calculationFn();
-    // dqs("#outPut-top").innerText = calculation;
+  } else if (currentValue === undefined) {
+    let newValue = dqs("#outPut").value;
+    console.log(newValue, " => Line No: 34");
+  } else if (!isNaN(currentValue)) {
+    dqs("#outPut").value += currentValue;
   }
 });
 document.body.addEventListener("keyup", function (e) {
   if (e.key === "Enter") {
     calculationFn();
+  } else if (false) {
+    //
+  } else {
+    dqs("#outPut").focus();
   }
 });

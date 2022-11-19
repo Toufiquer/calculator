@@ -8,97 +8,36 @@
     <title>Calculator</title>
   </head>
   <body class="bg-blue-200">
-    <div
-      class="container mx-auto bg-emerald-400 w-3/4 min-h-screen overflow-hidden"
-    >
+    <div class="container mx-auto bg-emerald-400 w-3/4 max-w-xs min-h-screen overflow-hidden">
+      <div class="text-bold text-center py-2">Works with keyboard and mouse.</div>
       <div class="h-44 bg-slate-100 flex flex-column relative">
-        <span
-          id="outPut-top"
-          class="absolute bottom-14 right-0 m-4 text-3xl text-gray-600"
-        ></span>
-        <input autofocus id="outPut" class="absolute bottom-0 right-0 p-2 text-3xl bg-slate-400 w-full text-yellow-50"></input>
+        <span id="outPut-top" class="absolute bottom-14 right-0 m-4 text-3xl text-gray-600"></span>
+        <input autofocus id="outPut" class="absolute bottom-0 right-0 p-2 text-3xl bg-slate-400 w-full text-yellow-50" />
       </div>
       <div id="calculator-btn" class="grid grid-cols-4 gap-4 m-6">
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          7
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">7</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">8</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">9</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 text-2xl font-bold">+</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">4</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">5</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">6</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 text-2xl font-bold">-</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">1</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">2</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">3</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 text-2xl font-bold">*</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">.</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">0</div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 text-2xl font-bold">C</div>
+
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 text-2xl font-bold">/</div>
+        <div class="hover:cursor-pointer hover:bg-red-500 text-center bg-red-400 text-2xl font-bold col-span-2 flex justify-center items-center" value="svg">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 flex justify-center items-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z" />
+          </svg>
         </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          8
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          9
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 p-4 text-2xl font-bold"
-        >
-          +
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          4
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          5
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          6
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 p-4 text-2xl font-bold"
-        >
-          -
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          1
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          2
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          3
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 p-4 text-2xl font-bold"
-        >
-          *
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          0
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-200 p-4 text-2xl font-bold"
-        >
-          C
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 p-4 text-2xl font-bold"
-        >
-          =
-        </div>
-        <div
-          class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 p-4 text-2xl font-bold"
-        >
-          /
-        </div>
+        <div class="hover:cursor-pointer hover:bg-teal-300 text-center bg-slate-400 text-2xl font-bold col-span-2">=</div>
       </div>
     </div>
 
