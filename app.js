@@ -17,11 +17,25 @@ function clearAll() {
 }
 function calculationFn() {
   let calScreen = dqs("#outPut").value;
-  if (calScreen !== "") {
+  let currentValue = calScreen[calScreen.length - 1];
+  if (currentValue === "+" || currentValue === "-" || currentValue === "*" || currentValue === "/") {
+    delOne();
+    calculationFn();
+  } else if (calScreen !== "") {
     let calculation = eval(calScreen);
     dqs("#outPut-top").innerText = calScreen;
     dqs("#outPut").value = calculation;
   }
+}
+function updateScreen(value) {
+  let oldValue = dqs("#outPut").value;
+  if (value !== oldValue[oldValue.length - 1]) {
+    dqs("#outPut").value = oldValue += value;
+  }
+}
+function delOne() {
+  let newValue = dqs("#outPut").value;
+  dqs("#outPut").value = newValue.slice(0, -1);
 }
 dqs("#calculator-btn").addEventListener("click", function (e) {
   let currentValue = e.target.innerText;
@@ -29,9 +43,10 @@ dqs("#calculator-btn").addEventListener("click", function (e) {
     clearAll();
   } else if (currentValue === "=") {
     calculationFn();
+  } else if (currentValue === "+" || currentValue === "-" || currentValue === "*" || currentValue === "/" || currentValue === ".") {
+    updateScreen(currentValue);
   } else if (currentValue === undefined) {
-    let newValue = dqs("#outPut").value;
-    console.log(newValue, " => Line No: 34");
+    delOne();
   } else if (!isNaN(currentValue)) {
     dqs("#outPut").value += currentValue;
   }
